@@ -1,0 +1,216 @@
+MDFloatLayout:
+    MDGridLayout:
+        cols:2
+        rows:2
+        size_hint: 1, .12
+        pos_hint: {'right':1,'top':1}
+        MDCard:
+            radius:0
+            MDLabel:
+                text: 'Jogador 1'
+                halign:'center'
+                font_size:'20sp'
+        MDCard:
+            radius:0
+            MDLabel:
+                text: 'Jogador 2'
+                halign:'center'
+                font_size:'20sp'
+        MDCard:
+            radius:0
+            MDLabel:
+                id: jog1
+                text: '0'
+                halign:'center'
+                font_size:'30sp'
+        MDCard:
+            radius:0
+            MDLabel:
+                id:jog2
+                text: '0'
+                halign:'center'
+                font_size:'30sp'
+
+
+    MDGridLayout:
+        cols: 3
+        rows: 3
+        size_hint: .8 ,0.4
+        pos_hint: {'center_x':.5 , 'center_y': .65}
+#        pos_hint:{'right': .9, 'top': .9}
+        spacing:5
+        MDCard:
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn1,1)
+            MDLabel:
+                id: btn1
+                text:''
+                font_size: '50sp'
+                halign:'center'
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn2,2)
+            MDLabel:
+                id: btn2
+                text:''
+                font_size: '50sp'
+                halign:'center'
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn3,3)
+            MDLabel:
+                id: btn3
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn4,4)
+            MDLabel:
+                id: btn4
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn5,5)
+            MDLabel:
+                id: btn5
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn6,6)
+            MDLabel:
+                id: btn6
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn7,7)
+            MDLabel:
+                id: btn7
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn8,8)
+            MDLabel:
+                id: btn8
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+        MDCard:
+
+            md_bg_color:0,0,0,0
+            line_color: "white"
+            on_release: app.press(btn9,9)
+            MDLabel:
+                id: btn9
+                text:''
+                font_size: '50sp'
+                halign:'center'
+
+    MDLabel:
+        id: score
+        font_size:'20sp'
+        text: "Jogador 1 começa"
+        halign:"center"
+        pos_hint:{"center_y": .40}
+
+    MDGridLayout:
+        cols: 3
+        pos_hint:{"center_y": .33}
+        MDLabel:
+            text: "Ganhar"
+            font_size:'16sp'
+            halign:"center"
+        MDLabel:
+            text: "Perder"
+            font_size:'16sp'
+            halign:"center"
+        MDLabel:
+            text: "Empatar"
+            font_size:'16sp'
+            halign:"center"
+
+    MDGridLayout:
+        pos_hint:{"center_y": .29}
+        cols: 3
+        MDLabel:
+            id: ganhar
+            font_size:'16sp'
+            text: "---"
+            halign:"center"
+
+        MDLabel:
+            id: perder
+            font_size:'16sp'
+            text: "---"
+            halign:"center"
+        MDLabel:
+            id: empatar
+            font_size:'16sp'
+            text: "---"
+            halign:"center"
+
+    MDRaisedButton:
+        id: restart
+        font_size:'28sp'
+        text: "Reiniciar o jogo"
+        pos_hint:{"center_x": .5, 'center_y': .2}
+        on_release: app.restart()
+
+
+
+    MDBoxLayout:
+        orientation: 'horizontal'
+        pos_hint:{ 'center_x':.5,'center_y': .1}
+        size_hint_x: 0.9
+        spacing: 25
+
+        MDSwitch:
+            id: 'pc'
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            width: dp(50)
+            on_active : app.pc()
+
+        MDLabel:
+            theme_text_color: "Custom"
+            text_color: "white"
+            text: "Jogador 2 IA"
+            halign:'left'
+            font_size:'20sp'
+
+
+
+
+
+
+
+
+
